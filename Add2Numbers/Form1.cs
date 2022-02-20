@@ -18,6 +18,11 @@ namespace Add2Numbers
             txtNumber1.Select();
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
+
         private void btnCal_Click(object sender, EventArgs e)
         {
             double result;
