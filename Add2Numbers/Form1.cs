@@ -35,7 +35,7 @@ namespace Add2Numbers
             }
             catch (Exception ex)
             {
-                MessageBox.Show("Please enter a double number" + ex.Message);
+                MessageBox.Show("Please enter a double number\n" + ex.Message);
             }
             result = num1 + num2;
             txtResult.Text = result.ToString();
