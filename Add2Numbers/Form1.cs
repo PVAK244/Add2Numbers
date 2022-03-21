@@ -12,6 +12,11 @@ namespace Add2Numbers
 {
     public partial class Form1 : Form
     {
+        public delegate double TinhToan(double a, double b);
+        TinhToan tinhtong = (double x, double y) => {
+            return x + y;
+        };
+
         public Form1()
         {
             InitializeComponent();
@@ -37,7 +42,7 @@ namespace Add2Numbers
             {
                 MessageBox.Show("Please enter a double number\n" + ex.Message);
             }
-            result = num1 + num2;
+            result = tinhtong(num1, num2);
             txtResult.Text = result.ToString();
         }
 
@@ -57,6 +62,6 @@ namespace Add2Numbers
         {
             if(e.KeyCode == Keys.Enter||e.KeyCode==Keys.Tab)
                 btnCal.Select();
-        }
+        }  
     }
 }
